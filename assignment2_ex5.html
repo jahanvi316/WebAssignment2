@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <h1>Exercise 5</h1>
+    </head>
+
+    <body>
+        <h2>Array to Table</h2>
+        <br/>
+
+        <table>
+
+        </table>
+
+
+        <script>
+
+
+            var students = [
+                { name: "Andy", id: 001, major: "Computer Science" },
+                { name: "Ben", id: 002, major: "Biology" },
+                { name: "Hari", id: 003, major: "Computer Science" },
+                { name: "Lisa", id: 004, major: "Physics" },
+                { name: "Wendy", id: 005, major: "Math" }
+            ];
+            document.write("<table>")
+
+            function generateHeader(table, data) {
+                document.write("<tr>");
+                document.write("<th> ID </th>");
+                document.write("<th> Name </th>");
+                document.write("<th> Major </th>");
+            }
+
+            function generateTable(table, data){
+
+                for(var i=0; i < students.length; i++){
+                    document.write("<tr>");
+                    document.write("<td>" + students[i].id + "</td>");
+                    document.write("<td>" + students[i].name + "</td>");
+                    document.write("<td>" + students[i].major + "</td>");
+                    document.write("</tr>")
+                }
+            }
+            
+
+            let table = document.querySelector("table");
+            let data = Object.keys(students[0]);
+            generateHeader(table, data);
+            generateTable(table, students);
+            
+            document.write("</table>");
+
+        </script>
+
+        <style>
+            table, tr, th, td{
+                border: 1px solid black
+            }
+        </style>
+    </body>
+</html>

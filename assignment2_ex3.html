@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <h1>Exercise 3</h1>
+    </head>
+
+    <body>
+        <h2>A simple virtual keyboard</h2>
+        <input type="button" id="A" value="A" onclick="keyPress('A')"/>
+        <input type="button" id="B" value="B" onclick="keyPress('B')"/>
+        <input type="button" id="C" value="C" onclick="keyPress('C')"/>
+        <input type="button" id="D" value="D" onclick="keyPress('D')"/>
+        <input type="button" id="E" value="E" onclick="keyPress('E')"/>
+        <input type="button" id="F" value="F" onclick="keyPress('F')"/>
+        <input type="button" id="G" value="G" onclick="keyPress('G')"/>
+        <input type="button" id="H" value="H" onclick="keyPress('H')"/>
+        <input type="button" id="I" value="I" onclick="keyPress('I')"/>
+        <input type="button" id="J" value="J" onclick="keyPress('J')"/>
+        <input type="button" id="K" value="K" onclick="keyPress('K')"/>
+        <input type="button" id="L" value="L" onclick="keyPress('L')"/>
+        <input type="button" id="M" value="M" onclick="keyPress('M')"/>
+        <input type="button" id="N" value="N" onclick="keyPress('N')"/>
+        <input type="button" id="O" value="O" onclick="keyPress('O')"/>
+        <input type="button" id="P" value="P" onclick="keyPress('P')"/>
+        <input type="button" id="Q" value="Q" onclick="keyPress('Q')"/>
+        <input type="button" id="R" value="R" onclick="keyPress('R')"/>
+        <input type="button" id="S" value="S" onclick="keyPress('S')"/>
+        <input type="button" id="T" value="T" onclick="keyPress('T')"/>
+        <input type="button" id="U" value="U" onclick="keyPress('U')"/>
+        <input type="button" id="V" value="V" onclick="keyPress('V')"/>
+        <input type="button" id="W" value="W" onclick="keyPress('W')"/>
+        <input type="button" id="X" value="X" onclick="keyPress('X')"/>
+        <input type="button" id="Y" value="Y" onclick="keyPress('Y')"/>
+        <input type="button" id="Z" value="Z" onclick="keyPress('Z')"/>
+        <input type="button" id="space" value=" " onclick="keyPress('space')"/>
+
+
+        <br/>
+
+        <p style="color:red" id="answer"></p>
+
+        <script>
+            var text = "";
+            function keyPress(letter){
+                var letter = document.getElementById(letter).value;
+                text += letter;
+                document.getElementById('answer').innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

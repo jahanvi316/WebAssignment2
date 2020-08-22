@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <h1>Exercise 6</h1>
+    </head>
+
+    <body>
+        <h2>Log in</h2>
+        <form>
+        Username <input type="text" id="username"/>
+        <br/>
+        <br/>
+        Password <input type="password" id="password"/>
+        <br/>
+        <input type="button" value="Log in" onClick="authenticate()">
+        </form>
+
+        <script>
+            var user = ["user1", "user2", "user3"];
+            var pass = ["user1-111", "user2-222", "user3-333"];
+
+            function authenticate(){
+                var userInput = document.getElementById("username").value;
+                var passInput = document.getElementById("password").value;
+                for(var i=0; i<3; i++){
+                    if(userInput == (user[i])) { //user found
+                        //check if password (AT SAME LOCATION IN PASS ARRAY)
+                        if(passInput == (pass[i])){ //if password is right
+                            alert("The username and password is correct. Congrats!");
+                            return; //return to break out of function
+                        }
+                        if(passInput != (pass[i])) { //password is wrong
+                            alert("Incorrect password");
+                            return; //return to break out of function
+                        }
+                    }
+                }
+                //user doesn't exist
+                alert("The username does not exist");
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <h1>Exercise 1</h1>
+    </head>
+
+    <body>
+        <h2>Say hello to yourself</h2>
+        <form method="post" name="form" id="formID">
+            Your name 
+            <textarea name="name" rows="1" id="nameID"></textarea>
+
+            <br/>
+            <input type="button" value="Click me!" onclick="showAlert()">
+        </form>    
+        <script>
+            function showAlert() {
+                var name = document.getElementById("nameID").value;
+                alert("Hello " + name);
+            }
+        </script>
+    </body>
+</html>

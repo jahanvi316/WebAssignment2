@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment 2</title>
+    <h1>Exercise 4</h1>
+</head>
+
+<body>
+    <h2>Check which items you want to buy</h2>
+    <form method="post" name="form" id="formID">
+        <input type="checkbox" id="milk" name="milk" value="Milk" /> Milk
+        <br />
+        <input type="checkbox" id="bread" name="bread" value="Bread" /> Bread
+        <br />
+        <input type="checkbox" id="soda" name="soda" value="Soda" /> Soda
+        <br />
+        <input type="checkbox" id="eggs" name="eggs" value="Eggs" /> Eggs
+        <br />
+        <input type="checkbox" id="pasta" name="pasta" value="Pasta" /> Pasta
+        <br />
+        <input type="button" value="Check Items" onclick="checkItems()"/>
+
+    </form>
+
+    <script>
+        function checkItems() {
+            var text= "";
+            var count=0;
+            if (document.getElementById("milk").checked){
+                text += "Milk, ";
+                count++;
+            }
+            if (document.getElementById("bread").checked){
+                text += "Bread, ";
+                count++;
+            }
+            if (document.getElementById("soda").checked){
+                text += "Soda, ";
+                count++;
+            }
+            if (document.getElementById("eggs").checked){
+                text += "Eggs, ";
+                count += 2; //add 2 because eggs is plural so "eggs are..." (grammatically correct)
+            }
+            if (document.getElementById("pasta").checked){
+                text += "Pasta, ";
+                count++;
+            }
+
+            // remove last comma and space
+            text = text.substring(0, text.length -2);
+            if (count == 0){
+                text = "There are no items in your cart";
+            }
+            else{
+                if (count == 1 ){
+                    text += " is in your cart";
+                }
+                else{
+                    text += " are in your cart";
+                }
+            }
+
+            alert(text);
+
+        }
+    </script>
+
+</body>
+
+</html>

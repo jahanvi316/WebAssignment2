@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <h1>Exercise 2</h1>
+    </head>
+
+    <body>
+        <h2>A very simple calculator</h2>
+        <form method="post" name="form" id="formID">
+            Number 1
+            <textarea name="num1" rows="1" id="num1"></textarea>
+            <br/>
+            Number 2
+            <textarea name="num2" rows="1" id="num2"></textarea>
+
+            <br/>
+
+            Result <p style="color:red" id="answer"></p>
+
+            <br/>
+            <input type="button" value="Add" onclick="add()">
+            <input type="button" value="Subtract" onclick="sub()">
+            <input type="button" value="Multiply" onclick="mult()">
+            <input type="button" value="Quotient" onclick="div()">
+
+        </form>    
+        <script>
+            function add() {
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+                var result = num1 + num2;
+                document.getElementById("answer").innerHTML=result;
+            }
+
+            function sub() {
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+                var result = num1 - num2;
+                document.getElementById("answer").innerHTML=result;
+            }
+
+            function mult() {
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+                var result = num1 * num2;
+                document.getElementById("answer").innerHTML=result;
+            }
+
+            function div() {
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+                var result = num1 / num2;
+                document.getElementById("answer").innerHTML=result;
+            }
+        </script>
+    </body>
+</html>
